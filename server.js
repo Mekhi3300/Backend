@@ -1,2 +1,11 @@
-console.log('this is some basic text just to show some improvement');
-console.log("This should also show up on the remote repository")
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening http://localhost:${port}`)
+})
